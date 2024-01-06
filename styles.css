@@ -1,15 +1,27 @@
+:root {
+    --side-length-board: min(64dvw, 64dvh);
+    --side-length-square: min(20dvw, 20dvh);
+    --side-length-x: min(16dvw, 16dvh);
+}
+
 * {
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 body {
     background-color: black;
 }
 
+h1 {
+    margin-top: 50px;
+    color: white;
+}
+
 #game-container {
-    width: min(64dvw, 64dvh);
-    height: min(64dvw, 64dvh);
+    width: var(--side-length-board);
+    height: var(--side-length-board);
     background-color: darkblue;
     display: flex;
     flex-direction: row;
@@ -22,15 +34,13 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.case {
-    /* box-sizing: border-box; */
-    /* border: 1dvh solid darkblue; */
-    width: min(20dvw, 20dvh);
-    height: min(20dvw, 20dvh);
+.square {
+    width: var(--side-length-square);
+    height: var(--side-length-square);
+    font-size: var(--side-length-x);
     background-color: lightgray;
-    text-align: center;
 }
 
-.case:hover {
+.square:hover {
     background-color: white;
 }
